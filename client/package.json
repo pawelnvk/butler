@@ -11,6 +11,12 @@
   "scripts": {
     "build": "react-scripts-ts build",
     "eject": "react-scripts-ts eject",
+    "new-atom": "yarn new-component --scope atoms",
+    "new-molecule": "yarn new-component --scope molecules",
+    "new-organism": "yarn new-component --scope organisms",
+    "new-template": "yarn new-component --scope templates",
+    "new-view": "yarn new-component --scope views",
+    "new-component": "hygen component new",
     "start": "react-scripts-ts start",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "test": "react-scripts-ts test --env=jsdom"
@@ -31,6 +37,7 @@
     "babel-core": "^6.26.3",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
+    "hygen": "^1.6.2",
     "react-docgen-typescript-webpack-plugin": "^1.1.0",
     "typescript": "^2.9.2",
     "typescript-styled-plugin": "^0.6.3"
