@@ -2,22 +2,12 @@
 App dedicated collecting recipes.
 
 ## Client
+Client part of an app is located in `client` folder.
+
 Before starting remember to install required node modules.
 
-To start development client app run:
-```
-cd client
-yarn start
-```
-
-To build client app run:
-```
-cd client
-yarn build
-```
-
-To test client app run:
-```
-cd client
-yarn test
-```
+### NPM scripts
+`yarn build` - building production bundle
+`yarn start` - starting development server
+`yarn storybook` - starting storybook server
+`yarn test` - runing tests
