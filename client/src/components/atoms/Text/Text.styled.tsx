@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { fontText, textColor } from 'src/contants/styles';
+import { fontText, textColor } from 'src/styles/variables';
 
 export const Paragraph = styled.p`
   color: ${textColor};

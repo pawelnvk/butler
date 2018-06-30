@@ -43,6 +43,13 @@
     "typescript-styled-plugin": "^0.6.3"
   },
   "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!src/**/*.stories.{ts,tsx}",
+      "!src/**/*.styled.{ts,tsx}",
+      "!src/**/index.{ts,tsx}",
+      "!src/registerServiceWorker.ts"
+    ],
     "moduleNameMapper": {
       "^src/(.*)$": "<rootDir>/src/$1"
     }

@@ -7,7 +7,7 @@ import {
   fontHeading4,
   fontHeading5,
   fontHeading6,
-} from 'src/contants/styles';
+} from 'src/styles/variables';
 
 const Heading = styled.span`
   margin: 0;
