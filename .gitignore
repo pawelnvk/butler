@@ -9,17 +9,16 @@ pids
 *.seed
 *.pid.lock
 
-/build
-/coverage
-/node_modules
-/typings
+build
+coverage
+node_modules
+typings
 .env
 .eslintcache
 .node_repl_history
 .npm
 .yarn-integrity
 *.tgz
-/**/node_modules
 
 .DS_Store
 .DS_Store?

@@ -10,6 +10,6 @@ interface I<%= name %>Props {
 
 const <%= name %>: React.SFC<I<%= name %>Props> = (props) => {
   return <Example />;
-}
+};
 
 export { <%= name %> };

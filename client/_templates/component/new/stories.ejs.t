@@ -10,4 +10,3 @@ storiesOf('<%= name %>', module)
   .add('example', () => (
     <<%= name %> />
   ));
-

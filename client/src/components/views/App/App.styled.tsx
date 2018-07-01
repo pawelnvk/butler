@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-import { fontFamily, primaryColor } from 'src/contants/styles';
+import { fontFamily, primaryColor } from 'src/styles/variables';
 
 export const Heading = styled.h1`
   font-family: ${fontFamily};

@@ -19,6 +19,7 @@
     "new-component": "hygen component new",
     "start": "react-scripts-ts start",
     "storybook": "start-storybook -p 9001 -c .storybook",
+    "svg-optimalize": "svgo src/assets/svg/*.svg",
     "test": "react-scripts-ts test --env=jsdom"
   },
   "devDependencies": {
@@ -39,12 +40,23 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "hygen": "^1.6.2",
     "react-docgen-typescript-webpack-plugin": "^1.1.0",
+    "svgo": "^1.0.5",
+    "tslint-config-airbnb": "^5.9.2",
     "typescript": "^2.9.2",
-    "typescript-styled-plugin": "^0.6.3"
+    "typescript-styled-plugin": "^0.6.3",
+    "url-loader": "^1.0.1"
   },
   "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!src/**/*.stories.{ts,tsx}",
+      "!src/**/*.styled.{ts,tsx}",
+      "!src/**/index.{ts,tsx}",
+      "!src/registerServiceWorker.ts"
+    ],
     "moduleNameMapper": {
-      "^src/(.*)$": "<rootDir>/src/$1"
+      "^src/(.*)$": "<rootDir>/src/$1",
+      "url-loader": "<rootDir>/node_modules/url-loader"
     }
   }
 }
