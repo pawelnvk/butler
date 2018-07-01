@@ -11,4 +11,4 @@ const App = () => (
   </Wrapper>
 );
 
-export default App;
+export { App };
