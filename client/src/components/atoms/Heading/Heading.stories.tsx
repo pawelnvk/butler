@@ -14,4 +14,3 @@ storiesOf('Heading', module)
       <Heading priority={6}>Heading 6</Heading>
     </React.Fragment>
   ));
-

@@ -7,10 +7,10 @@ import {
   successColor,
   textColor,
 } from 'src/styles/variables';
-import { COLOR_DANGER, COLOR_DEFAULT, COLOR_SUCCESS } from './Text.constants';
+import { COLOR_DANGER, COLOR_DEFAULT, COLOR_SUCCESS, T_COLOR } from './Text.constants';
 
-const color = (type?: string) => {
-  switch(type) {
+const color = (type?: T_COLOR) => {
+  switch (type) {
     case COLOR_DANGER:
       return dangerColor;
     case COLOR_DEFAULT:
@@ -20,11 +20,11 @@ const color = (type?: string) => {
     default:
       return textColor;
   }
-}
+};
 
 interface IParagraphProps {
-  color?: string,
-  small?: boolean,
+  color?: T_COLOR;
+  small?: boolean;
 }
 
 export const Paragraph = styled.p`

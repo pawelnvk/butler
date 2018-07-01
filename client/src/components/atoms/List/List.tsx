@@ -9,9 +9,9 @@ import {
 } from './List.styled';
 
 interface IListProps {
-  children: React.ReactNodeArray,
-  className?: string,
-  ordered?: boolean,
+  children: React.ReactNodeArray;
+  className?: string;
+  ordered?: boolean;
 }
 
 const List: React.SFC<IListProps> = ({ children, className, ordered }) => {
@@ -25,13 +25,13 @@ const List: React.SFC<IListProps> = ({ children, className, ordered }) => {
       <ListItemElement key={key}>
         <Text inline={true}>{child}</Text>
       </ListItemElement>
-    )
+    );
   });
 
   return (
     <ListElement className={className}>{listElements}</ListElement>
   );
-}
+};
 
 List.defaultProps = {
   className: '',

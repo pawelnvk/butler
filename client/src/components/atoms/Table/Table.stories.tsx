@@ -18,4 +18,3 @@ storiesOf('Table', module)
       </Row>
     </Table>
   ));
-

@@ -39,6 +39,7 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "hygen": "^1.6.2",
     "react-docgen-typescript-webpack-plugin": "^1.1.0",
+    "tslint-config-airbnb": "^5.9.2",
     "typescript": "^2.9.2",
     "typescript-styled-plugin": "^0.6.3"
   },

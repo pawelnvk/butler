@@ -4,8 +4,8 @@ import { Row } from './Row';
 import { Table as StyledTable } from './Table.styled';
 
 interface ITableProps {
-  children?: React.ReactNode,
-  className?: string,
+  children?: React.ReactNode;
+  className?: string;
 }
 
 const Table: React.SFC<ITableProps> = ({ children, className }) => {

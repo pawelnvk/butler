@@ -12,7 +12,7 @@ const getComponent = (customProps = {}) => {
   );
 
   return shallow(jsx);
-}
+};
 
 it('renders without crashing', () => {
   const component = getComponent();

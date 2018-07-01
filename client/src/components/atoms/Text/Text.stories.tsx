@@ -20,4 +20,3 @@ storiesOf('Text', module)
   .add('caption success', () => (
       <Text color={COLOR_SUCCESS} small={true}>This is example caption</Text>
   ));
-

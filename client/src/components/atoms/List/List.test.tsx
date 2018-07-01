@@ -8,7 +8,7 @@ import {
   OrderedList,
   OrderedListItem,
   UnorderedList,
-  UnorderedListItem
+  UnorderedListItem,
 } from './List.styled';
 
 const getComponent = (customProps = {}) => {
@@ -43,7 +43,7 @@ it('is orderd list if provided type prop', () => {
 it('displays passed content as unordered list elements as default', () => {
   const children = [
     <React.Fragment key="1">List item 1</React.Fragment>,
-    <React.Fragment key="2">List item 2</React.Fragment>
+    <React.Fragment key="2">List item 2</React.Fragment>,
   ];
 
   const component = getComponent({ children });
@@ -54,7 +54,7 @@ it('displays passed content as unordered list elements as default', () => {
 it('displays passed content as ordered list elements if provided type prop', () => {
   const children = [
     <React.Fragment key="1">List item 1</React.Fragment>,
-    <React.Fragment key="2">List item 2</React.Fragment>
+    <React.Fragment key="2">List item 2</React.Fragment>,
   ];
 
   const component = getComponent({ children, ordered: true });
@@ -65,7 +65,7 @@ it('displays passed content as ordered list elements if provided type prop', () 
 it('adds key prop to list elements', () => {
   const children = [
     <React.Fragment key="1">List item 1</React.Fragment>,
-    <React.Fragment key="2">List item 2</React.Fragment>
+    <React.Fragment key="2">List item 2</React.Fragment>,
   ];
 
   const component = getComponent({ children });

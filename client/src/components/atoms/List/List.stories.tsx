@@ -16,4 +16,3 @@ storiesOf('List', module)
       <React.Fragment key="2">List item 2</React.Fragment>
     </List>
   ));
-

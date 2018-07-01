@@ -3,10 +3,10 @@ import * as React from 'react';
 import * as Headings from './Heading.styled';
 
 interface IHeadingProps {
-  children?: React.ReactNode,
-  className?: string,
-  priority?: number,
-};
+  children?: React.ReactNode;
+  className?: string;
+  priority?: number;
+}
 
 const Heading: React.SFC<IHeadingProps> = ({ className, children, priority }) => {
   const Element = Headings[`Heading${priority}`];

@@ -3,7 +3,7 @@ import * as React from 'react';
 import { Cell } from '../Cell';
 
 interface IRowProps {
-  children: React.ReactNode,
+  children: React.ReactNode;
 }
 
 const Row: React.SFC<IRowProps> = ({ children }) => {

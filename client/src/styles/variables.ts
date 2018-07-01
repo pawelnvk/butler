@@ -30,17 +30,62 @@ export const textFontWeight = 400;
 export const captionFontWeight = 400;
 export const tableFontWeight = 500;
 
-export const fontFamily = "'Muli', sans-serif";
+export const fontFamily = '\'Muli\', sans-serif';
 
-export const fontHeading1 = font({ family: fontFamily, lineHeight: heading1LineHeight, size: heading1FontSize, weight: heading1fontWeight });
-export const fontHeading2 = font({ family: fontFamily, lineHeight: heading2LineHeight, size: heading2FontSize, weight: heading2fontWeight });
-export const fontHeading3 = font({ family: fontFamily, lineHeight: heading3LineHeight, size: heading3FontSize, weight: heading3fontWeight });
-export const fontHeading4 = font({ family: fontFamily, lineHeight: heading4LineHeight, size: heading4FontSize, weight: heading4fontWeight });
-export const fontHeading5 = font({ family: fontFamily, lineHeight: heading5LineHeight, size: heading5FontSize, weight: heading5fontWeight });
-export const fontHeading6 = font({ family: fontFamily, lineHeight: heading6LineHeight, size: heading6FontSize, weight: heading6fontWeight });
-export const fontText = font({ family: fontFamily, lineHeight: textLineHeight, size: textFontSize, weight: textFontWeight });
-export const fontCaption = font({ family: fontFamily, lineHeight: captionLineHeight, size: captionFontSize, weight: captionFontWeight });
-export const fontTable = font({ family: fontFamily, lineHeight: tableLineHeight, size: tableFontSize, weight: tableFontWeight });
+export const fontHeading1 = font({
+  family: fontFamily,
+  lineHeight: heading1LineHeight,
+  size: heading1FontSize,
+  weight: heading1fontWeight,
+});
+export const fontHeading2 = font({
+  family: fontFamily,
+  lineHeight: heading2LineHeight,
+  size: heading2FontSize,
+  weight: heading2fontWeight,
+});
+export const fontHeading3 = font({
+  family: fontFamily,
+  lineHeight: heading3LineHeight,
+  size: heading3FontSize,
+  weight: heading3fontWeight,
+});
+export const fontHeading4 = font({
+  family: fontFamily,
+  lineHeight: heading4LineHeight,
+  size: heading4FontSize,
+  weight: heading4fontWeight,
+});
+export const fontHeading5 = font({
+  family: fontFamily,
+  lineHeight: heading5LineHeight,
+  size: heading5FontSize,
+  weight: heading5fontWeight,
+});
+export const fontHeading6 = font({
+  family: fontFamily,
+  lineHeight: heading6LineHeight,
+  size: heading6FontSize,
+  weight: heading6fontWeight,
+});
+export const fontText = font({
+  family: fontFamily,
+  lineHeight: textLineHeight,
+  size: textFontSize,
+  weight: textFontWeight,
+});
+export const fontCaption = font({
+  family: fontFamily,
+  lineHeight: captionLineHeight,
+  size: captionFontSize,
+  weight: captionFontWeight,
+});
+export const fontTable = font({
+  family: fontFamily,
+  lineHeight: tableLineHeight,
+  size: tableFontSize,
+  weight: tableFontWeight,
+});
 
 export const baseColor = '#333333';
 export const dangerColor = '#c80039';

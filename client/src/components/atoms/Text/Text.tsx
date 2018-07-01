@@ -7,12 +7,12 @@ import {
 import { Paragraph, Span } from './Text.styled';
 
 interface ITextProps {
-  children?: React.ReactNode,
-  className?: string,
-  color?: T_COLOR,
-  inline?: boolean,
-  small?: boolean,
-};
+  children?: React.ReactNode;
+  className?: string;
+  color?: T_COLOR;
+  inline?: boolean;
+  small?: boolean;
+}
 
 const Text: React.SFC<ITextProps> = ({
   children,
