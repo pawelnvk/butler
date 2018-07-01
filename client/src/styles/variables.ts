@@ -10,6 +10,7 @@ export const textFontSize = 14;
 export const captionFontSize = 12;
 export const tableFontSize = 12;
 export const buttonFontSize = 14;
+export const badgeFontSize = 10;
 
 export const heading1LineHeight = 49;
 export const heading2LineHeight = 33;
@@ -21,6 +22,7 @@ export const textLineHeight = 19;
 export const captionLineHeight = 16;
 export const tableLineHeight = 16;
 export const buttonLineHeight = 19;
+export const badgeLineHeight = 14;
 
 export const heading1fontWeight = 500;
 export const heading2fontWeight = 500;
@@ -31,7 +33,8 @@ export const heading6fontWeight = 500;
 export const textFontWeight = 400;
 export const captionFontWeight = 400;
 export const tableFontWeight = 500;
-export const buttonFontWeight = 700;
+export const buttonFontWeight = 900;
+export const badgeFontWeight = 900;
 
 export const fontFamily = '\'Muli\', sans-serif';
 
@@ -95,9 +98,16 @@ export const fontButton = font({
   size: buttonFontSize,
   weight: buttonFontWeight,
 });
+export const fontBadge = font({
+  family: fontFamily,
+  lineHeight: badgeLineHeight,
+  size: badgeFontSize,
+  weight: badgeFontWeight,
+});
 
 export const baseColor = '#333333';
 export const dangerColor = '#c80039';
+export const grayColor = '#999999';
 export const primaryColor = '#ed6a5a';
 export const secondaryColor = '#36c9c6';
 export const successColor = '#34935b';
