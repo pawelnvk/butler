@@ -1,11 +1,3 @@
-// improper hoisting jest.mock is resulting in returning
-// undefined instead of mocked values
-// https://github.com/kulshekhar/ts-jest/issues/90
-const mockBaseGutter = 12;
-jest.mock('./variables', () => {
-  return { baseGutter: mockBaseGutter };
-});
-
 import {
   absolute,
   fixed,
@@ -21,13 +13,13 @@ describe('gutter', () => {
   it('returns baseGutter value by default', () => {
     const gutterValue = gutter();
 
-    expect(gutterValue).toEqual(mockBaseGutter);
+    expect(gutterValue).toEqual(12);
   });
 
   it('returns baseGutter multiplied by provided ration', () => {
     const gutterValue = gutter(0.5);
 
-    expect(gutterValue).toEqual(mockBaseGutter * 0.5);
+    expect(gutterValue).toEqual(6);
   });
 });
 

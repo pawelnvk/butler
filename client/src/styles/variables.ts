@@ -8,6 +8,7 @@ export const heading5FontSize = 16;
 export const heading6FontSize = 14;
 export const textFontSize = 14;
 export const captionFontSize = 12;
+export const tableFontSize = 12;
 
 export const heading1LineHeight = 49;
 export const heading2LineHeight = 33;
@@ -17,6 +18,7 @@ export const heading5LineHeight = 22;
 export const heading6LineHeight = 19;
 export const textLineHeight = 19;
 export const captionLineHeight = 16;
+export const tableLineHeight = 16;
 
 export const heading1fontWeight = 500;
 export const heading2fontWeight = 500;
@@ -26,8 +28,8 @@ export const heading5fontWeight = 500;
 export const heading6fontWeight = 500;
 export const textFontWeight = 400;
 export const captionFontWeight = 400;
+export const tableFontWeight = 500;
 
-export const baseGutter = 12;
 export const fontFamily = "'Muli', sans-serif";
 
 export const fontHeading1 = font({ family: fontFamily, lineHeight: heading1LineHeight, size: heading1FontSize, weight: heading1fontWeight });
@@ -38,6 +40,7 @@ export const fontHeading5 = font({ family: fontFamily, lineHeight: heading5LineH
 export const fontHeading6 = font({ family: fontFamily, lineHeight: heading6LineHeight, size: heading6FontSize, weight: heading6fontWeight });
 export const fontText = font({ family: fontFamily, lineHeight: textLineHeight, size: textFontSize, weight: textFontWeight });
 export const fontCaption = font({ family: fontFamily, lineHeight: captionLineHeight, size: captionFontSize, weight: captionFontWeight });
+export const fontTable = font({ family: fontFamily, lineHeight: tableLineHeight, size: tableFontSize, weight: tableFontWeight });
 
 export const baseColor = '#333333';
 export const dangerColor = '#c80039';

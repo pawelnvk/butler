@@ -1,6 +1,4 @@
-import { baseGutter } from './variables';
-
-export const gutter = (ratio: number = 1) => baseGutter * ratio;
+export const gutter = (ratio: number = 1) => 12 * ratio;
 
 export const toPx = (value: number) => `${value}px`;
 
