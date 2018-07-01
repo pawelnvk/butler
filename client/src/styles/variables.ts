@@ -9,6 +9,7 @@ export const heading6FontSize = 14;
 export const textFontSize = 14;
 export const captionFontSize = 12;
 export const tableFontSize = 12;
+export const buttonFontSize = 14;
 
 export const heading1LineHeight = 49;
 export const heading2LineHeight = 33;
@@ -19,6 +20,7 @@ export const heading6LineHeight = 19;
 export const textLineHeight = 19;
 export const captionLineHeight = 16;
 export const tableLineHeight = 16;
+export const buttonLineHeight = 19;
 
 export const heading1fontWeight = 500;
 export const heading2fontWeight = 500;
@@ -29,6 +31,7 @@ export const heading6fontWeight = 500;
 export const textFontWeight = 400;
 export const captionFontWeight = 400;
 export const tableFontWeight = 500;
+export const buttonFontWeight = 700;
 
 export const fontFamily = '\'Muli\', sans-serif';
 
@@ -86,6 +89,12 @@ export const fontTable = font({
   size: tableFontSize,
   weight: tableFontWeight,
 });
+export const fontButton = font({
+  family: fontFamily,
+  lineHeight: buttonLineHeight,
+  size: buttonFontSize,
+  weight: buttonFontWeight,
+});
 
 export const baseColor = '#333333';
 export const dangerColor = '#c80039';
@@ -93,5 +102,6 @@ export const primaryColor = '#ed6a5a';
 export const secondaryColor = '#36c9c6';
 export const successColor = '#34935b';
 export const textColor = '#777777';
+export const whiteColor = '#ffffff';
 
 export const unorderedDiskSize = 5;
