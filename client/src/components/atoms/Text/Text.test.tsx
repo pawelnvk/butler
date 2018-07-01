@@ -2,6 +2,7 @@ import { shallow } from 'enzyme';
 import * as React from 'react';
 
 import { Text } from './Text';
+import { COLOR_DANGER, COLOR_SUCCESS } from './Text.constants';
 import { Paragraph, Span } from './Text.styled';
 
 const getComponent = (customProps = {}) => {
@@ -42,4 +43,20 @@ it('sets className when provided', () => {
   expect(component.is('.test-class')).toBeTruthy();
 });
 
+it('sets small prop on child component when provided', () => {
+  const component = getComponent({ children: 'Example', small: true });
 
+  expect(component.props().small).toBeTruthy();
+});
+
+it('sets color prop on child component to COLOR_DANGER when provided', () => {
+  const component = getComponent({ children: 'Example', color: COLOR_DANGER });
+
+  expect(component.props().color).toEqual(COLOR_DANGER);
+});
+
+it('sets color prop on child component to COLOR_SUCCESS when provided', () => {
+  const component = getComponent({ children: 'Example', color: COLOR_SUCCESS });
+
+  expect(component.props().color).toEqual(COLOR_SUCCESS);
+});
