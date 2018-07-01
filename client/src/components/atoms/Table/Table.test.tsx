@@ -48,11 +48,7 @@ it('renders only table row as direct descendant inside table body', () => {
 });
 
 it('sets className when provided', () => {
-  const children = [
-    <React.Fragment key="1">List item 1</React.Fragment>,
-  ];
-
-  const component = getComponent({ children, className: 'test-class' });
+  const component = getComponent({ className: 'test-class' });
 
   expect(component.is('.test-class')).toBeTruthy();
 });
