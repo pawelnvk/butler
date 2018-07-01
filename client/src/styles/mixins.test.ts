@@ -31,7 +31,7 @@ describe('toPx', () => {
     const parsedValue = toPx(value);
 
     expect(parsedValue).toEqual(expected);
-  })
+  });
 });
 
 describe('font', () => {
@@ -46,7 +46,7 @@ describe('font', () => {
     });
 
     expect(fontValue).toEqual(expected);
-  })
+  });
 });
 
 describe('position', () => {
@@ -111,6 +111,26 @@ describe('position', () => {
 
     expect(positionString).not.toContain(notExpected);
   });
+
+  it('does not omit any of position values if equal to 0', () => {
+    const expectedTop = 'top: 0';
+    const expectedRight = 'right: 0';
+    const expectedBottom = 'bottom: 0';
+    const expectedLeft = 'left: 0';
+
+    const positionString = position({
+      bottom: 0,
+      left: 0,
+      position: 'absolute',
+      right: 0,
+      top: 0,
+    });
+
+    expect(positionString).toContain(expectedTop);
+    expect(positionString).toContain(expectedRight);
+    expect(positionString).toContain(expectedBottom);
+    expect(positionString).toContain(expectedLeft);
+  });
 });
 
 describe('absolute', () => {
@@ -152,7 +172,7 @@ describe('size', () => {
 
     expect(sizeValue).toContain(expectedHeight);
     expect(sizeValue).toContain(expectedWidth);
-  })
+  });
 
   it('omits height if not provided', () => {
     const notExpectedHeight = 'height';

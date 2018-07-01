@@ -4,7 +4,7 @@ import * as React from 'react';
 import { Text } from './Text';
 import { COLOR_DANGER, COLOR_SUCCESS } from './Text.constants';
 
-storiesOf('Text', module)
+storiesOf('Atoms/Text', module)
   .add('paragraph', () => (
       <Text>This is example text</Text>
   ))

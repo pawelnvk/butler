@@ -6,7 +6,7 @@ import { COLOR_GRAY } from './Badge.constants';
 
 const onClick = () => null;
 
-storiesOf('Badge', module)
+storiesOf('Atoms/Badge', module)
   .add('default', () => (
     <Badge>Badge</Badge>
   ))

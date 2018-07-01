@@ -3,7 +3,7 @@ import * as React from 'react';
 
 import { Heading } from './Heading';
 
-storiesOf('Heading', module)
+storiesOf('Atoms/Heading', module)
   .add('default', () => (
     <React.Fragment>
       <Heading>Heading 1</Heading>

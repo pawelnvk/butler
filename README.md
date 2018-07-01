@@ -24,18 +24,3 @@ Before starting remember to install required node modules.
 `yarn storybook` - starting storybook server
 
 `yarn test` - runing tests
-
-### Issues
-
-There is an issue when mocking modules with help of `jest.mock`. When mocking values after importing modules it results in returning undefined instead of mocked values. It is related to improper hoisting of `jest.mock`. More informations [here](https://github.com/kulshekhar/ts-jest/issues/90).
-
-Remember to place `jest.mock` before `import` expressions:
-
-```
-const mockBaseGutter = 12;
-jest.mock('./variables', () => {
-  return { baseGutter: mockBaseGutter };
-});
-
-import * as mixins from './mixins';
-```

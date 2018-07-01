@@ -3,7 +3,7 @@ import * as React from 'react';
 
 import { Button } from './Button';
 
-storiesOf('Button', module)
+storiesOf('Atoms/Button', module)
   .add('primary', () => (
     <Button primary={true}>Primary button</Button>
   ))

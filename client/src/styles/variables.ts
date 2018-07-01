@@ -108,6 +108,7 @@ export const fontBadge = font({
 export const baseColor = '#333333';
 export const dangerColor = '#c80039';
 export const grayColor = '#999999';
+export const lightGrayColor = '#f1f1f1';
 export const primaryColor = '#ed6a5a';
 export const secondaryColor = '#36c9c6';
 export const successColor = '#34935b';

@@ -3,7 +3,7 @@ import * as React from 'react';
 
 import { App } from './App';
 
-storiesOf('App', module)
+storiesOf('Views/App', module)
   .add('example', () => (
     <App />
   ));
