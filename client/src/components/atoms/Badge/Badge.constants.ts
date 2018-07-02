@@ -1,0 +1,6 @@
+export const COLOR_DEFAULT = 'COLOR_DEFAULT';
+export const COLOR_GRAY = 'COLOR_GRAY';
+
+export type T_COLOR_DEFAULT = 'COLOR_DEFAULT';
+export type T_COLOR_GRAY = 'COLOR_GRAY';
+export type T_COLOR = T_COLOR_DEFAULT | T_COLOR_GRAY;

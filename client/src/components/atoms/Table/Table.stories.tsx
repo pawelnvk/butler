@@ -5,7 +5,7 @@ import { Cell } from './Cell';
 import { Row } from './Row';
 import { Table } from './Table';
 
-storiesOf('Table', module)
+storiesOf('Atoms/Table', module)
   .add('default', () => (
     <Table>
       <Row key="1">

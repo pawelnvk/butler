@@ -6,7 +6,7 @@ import * as React from 'react';
 
 import { <%= name %> } from './<%= name %>';
 
-storiesOf('<%= name %>', module)
+storiesOf('<%= h.capitalize(scope) %>/<%= name %>', module)
   .add('example', () => (
     <<%= name %> />
   ));

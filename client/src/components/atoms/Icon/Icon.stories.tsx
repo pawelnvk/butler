@@ -11,7 +11,7 @@ import {
   TRASH_ICON,
 } from './Icon.constants';
 
-storiesOf('Icon', module)
+storiesOf('Atoms/Icon', module)
   .add('chevron', () => (
     <Icon icon={CHEVRON_ICON} />
   ))

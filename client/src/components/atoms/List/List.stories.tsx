@@ -3,7 +3,7 @@ import * as React from 'react';
 
 import { List } from './List';
 
-storiesOf('List', module)
+storiesOf('Atoms/List', module)
   .add('unordered', () => (
     <List>
       <React.Fragment key="1">List item 1</React.Fragment>
