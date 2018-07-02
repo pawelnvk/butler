@@ -13,9 +13,7 @@ export const OrderedList = UnorderedList.withComponent('ol').extend`
   counter-reset: item;
 `;
 
-export const BaseListItem = styled.li``;
-
-export const OrderedListItem = BaseListItem.extend`
+export const OrderedListItem = styled.li`
   &:before {
     counter-increment: item;
     content: counter(item)".";
@@ -25,7 +23,7 @@ export const OrderedListItem = BaseListItem.extend`
   }
 `;
 
-export const UnorderedListItem = BaseListItem.extend`
+export const UnorderedListItem = styled.li`
   ${relative()}
 
   padding-left: ${toPx(gutter(1.5))};
