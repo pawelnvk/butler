@@ -25,4 +25,15 @@ Before starting remember to install required node modules.
 
 `yarn storybook` - starting storybook server
 
-`yarn test` - runing tests
+`yarn test` - running tests
+
+## Server
+Client part of an app is located in `server` folder.
+
+Before starting remember to install required node modules.
+
+### NPM scripts
+
+`db:create:dev` - creating development database
+
+`start:dev` - starting development server
