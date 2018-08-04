@@ -22,6 +22,7 @@
       "typeorm": "0.2.7"
    },
    "scripts": {
+      "create:entity": "typeorm entity:create -n",
       "db:create:dev": "dropdb --if-exists --interactive butler_development && createdb butler_development && createuser root",
       "postinstall": "$(yarn bin)/pm2 install typescript",
       "start:dev": "pm2 start pm2.dev.config.js"
