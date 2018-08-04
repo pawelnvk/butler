@@ -1,12 +1,19 @@
-import { storiesOf } from '@storybook/react';
+// import { action } from '@storybook/addon-actions';
+import { storiesOf, Story } from '@storybook/react';
 import * as React from 'react';
 
 import { Badge } from './Badge';
 import { COLOR_GRAY } from './Badge.constants';
 
-const onClick = () => null;
+interface IStory extends Story {
+  addParameters: (options: any) => Story;
+}
 
-storiesOf('Atoms/Badge', module)
+const onClick = () => null;
+const stories = storiesOf('Atoms/Badge', module) as IStory;
+
+stories
+  .addParameters({ info: { inline: true } })
   .add('default', () => (
     <Badge>Badge</Badge>
   ))
