@@ -11,6 +11,8 @@ Before starting remember to install required node modules.
 
 `yarn new:atom Example` - creating atom component named Example
 
+`yarn new:composer Example` - creating composer named Example
+
 `yarn new:molecule Example` - creating molecule component named Example
 
 `yarn new:organism Example` - creating organism component named Example

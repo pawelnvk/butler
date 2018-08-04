@@ -1,10 +1,11 @@
 {
   "name": "butler",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "dependencies": {
     "classnames": "^2.2.6",
     "lodash.isundefined": "^3.0.1",
+    "normalize.css": "^8.0.0",
     "react": "^16.4.1",
     "react-dom": "^16.4.1",
     "react-router-dom": "^4.3.1",
@@ -16,6 +17,7 @@
     "build": "react-scripts-ts build",
     "eject": "react-scripts-ts eject",
     "new:atom": "yarn new:component --scope atoms --name",
+    "new:composer": "hygen composer new --name",
     "new:molecule": "yarn new:component --scope molecules --name",
     "new:organism": "yarn new:component --scope organisms --name",
     "new:template": "yarn new:component --scope templates --name",
@@ -40,6 +42,7 @@
     "@types/react-dom": "^16.0.6",
     "@types/react-router-dom": "^4.2.7",
     "@types/storybook__addon-actions": "^3.0.3",
+    "@types/storybook__addon-info": "^3.2.3",
     "@types/storybook__react": "^3.0.7",
     "awesome-typescript-loader": "^5.2.0",
     "babel-core": "^6.26.3",
