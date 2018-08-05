@@ -1,33 +1,44 @@
 {
-   "name": "butler",
-   "version": "1.0.0",
-   "devDependencies": {
-      "@types/body-parser": "^1.17.0",
-      "@types/cors": "^2.8.4",
-      "@types/dotenv": "^4.0.3",
-      "@types/express": "^4.16.0",
-      "@types/node": "^8.0.29",
-      "ts-node": "^7.0.0",
-      "typescript": "2.5.2"
-   },
-   "dependencies": {
-      "body-parser": "^1.18.3",
-      "cors": "^2.8.4",
-      "dotenv": "^6.0.0",
-      "express": "^4.16.3",
-      "pg": "^7.3.0",
-      "pm2": "^3.0.3",
-      "reflect-metadata": "^0.1.10",
-      "routing-controllers": "^0.7.7",
-      "typeorm": "0.2.7"
-   },
-   "scripts": {
-      "create:entity": "typeorm entity:create -n",
-      "db:create:dev": "dropdb --if-exists --interactive butler_development && createdb butler_development && createuser root",
-      "migration:generate": "yarn typeorm migration:generate -n",
-      "migration:run": "yarn typeorm -- migration:run",
-      "postinstall": "$(yarn bin)/pm2 install typescript",
-      "start:dev": "pm2 start pm2.dev.config.js",
-      "typeorm": "yarn ts-node $(yarn bin)/typeorm"
-   }
+  "name": "butler",
+  "version": "1.0.0",
+  "devDependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/chai": "^4.1.4",
+    "@types/cors": "^2.8.4",
+    "@types/dotenv": "^4.0.3",
+    "@types/express": "^4.16.0",
+    "@types/mocha": "^5.2.5",
+    "@types/node": "^8.0.29",
+    "chai": "^4.1.2",
+    "mocha": "^5.2.0",
+    "supertest": "^3.1.0",
+    "ts-node": "^7.0.0",
+    "typescript": "2.9.1"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cors": "^2.8.4",
+    "dotenv": "^6.0.0",
+    "express": "^4.16.3",
+    "jest": "^23.4.2",
+    "pg": "^7.3.0",
+    "pm2": "^3.0.3",
+    "reflect-metadata": "^0.1.10",
+    "routing-controllers": "^0.7.7",
+    "swagger-ui-express": "^3.0.10",
+    "typeorm": "0.2.7"
+  },
+  "scripts": {
+    "check:test": "NODE_ENV=test yarn mocha --timeout 25000 --exit -r ts-node/register $(find ./src/ -name '*.test.ts') -b",
+    "create:entity": "typeorm entity:create -n",
+    "db:create:dev": "dropdb --if-exists --interactive butler_development && createdb butler_development",
+    "db:create:test": "dropdb --if-exists --interactive butler_test && createdb butler_test",
+    "db:create:user": "createuser root",
+    "migration:generate": "yarn typeorm migration:generate -n",
+    "migration:run:dev": "yarn typeorm -- migration:run",
+    "migration:run:test": "NODE_ENV=test yarn typeorm -- migration:run",
+    "postinstall": "$(yarn bin)/pm2 install typescript",
+    "start:dev": "pm2 start pm2.dev.config.js",
+    "typeorm": "yarn ts-node $(yarn bin)/typeorm"
+  }
 }
