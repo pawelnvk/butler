@@ -1,8 +1,11 @@
 import {
   Column,
   Entity,
+  OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
+
+import { DishIngredient } from './DishIngredient';
 
 @Entity()
 class Dish {
@@ -13,10 +16,13 @@ class Dish {
   description: string;
 
   @Column()
-  recipe: string;
+  name: string;
 
   @Column()
-  name: string;
+  recipe: string;
+
+  @OneToMany(type => DishIngredient, dishIngredient => dishIngredient.ingredient)
+	ingredients: DishIngredient[];
 }
 
 export { Dish };

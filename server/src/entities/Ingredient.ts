@@ -1,8 +1,11 @@
 import {
   Column,
   Entity,
+  OneToMany,
   PrimaryGeneratedColumn,
 } from 'typeorm';
+
+import { DishIngredient } from './DishIngredient';
 
 @Entity()
 class Ingredient {
@@ -23,6 +26,9 @@ class Ingredient {
 
   @Column()
   proteins: number;
+
+  @OneToMany(type => DishIngredient, dishIngredient => dishIngredient.dish)
+	dishes: DishIngredient[];
 }
 
 export { Ingredient };
