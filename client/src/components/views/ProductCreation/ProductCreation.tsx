@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Field, Form } from 'react-final-form';
 
-import { makePostProductsRequest } from 'src/api/products';
+import { makePostProductRequest } from 'src/api/products';
 import { Button } from 'src/components/atoms/Button';
 import { Heading } from 'src/components/atoms/Heading';
 import { Input } from 'src/components/atoms/Input';
@@ -44,7 +44,7 @@ const ProductCreation: React.SFC = () => {
       name,
       proteins,
     }: IFormData) => {
-      makePostProductsRequest({
+      makePostProductRequest({
         calories,
         carbohydrates,
         fats,
