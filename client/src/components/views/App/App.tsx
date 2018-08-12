@@ -7,6 +7,7 @@ import {
 } from 'react-router-dom';
 
 import { Layout } from 'src/components/templates/Layout';
+import { DishDetails } from 'src/components/views/DishDetails';
 import { DishesListing } from 'src/components/views/DishesListing';
 import { ProductCreation } from 'src/components/views/ProductCreation';
 import { ProductsListing } from 'src/components/views/ProductsListing';
@@ -22,7 +23,7 @@ const App = () => (
   <Router>
     <Layout>
       <Switch>
-        <Route path={getDishDetailsPath()} component={() => <div>Details</div>} />
+        <Route path={getDishDetailsPath()} component={DishDetails} />
         <Route path={getDishesListPath()} component={DishesListing} />
         <Route path={getProductsListPath()} component={ProductsListing} />
         <Route path={getProductCreationPath()} component={ProductCreation} />

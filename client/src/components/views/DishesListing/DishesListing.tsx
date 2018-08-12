@@ -11,7 +11,6 @@ import { getDishDetailsPath } from 'src/constants/paths';
 import { Dishes } from 'src/entities/Dishes';
 import { groupBy } from 'src/services/common';
 import { Margin } from 'src/styles/decorators/Margin';
-import { Padding } from 'src/styles/decorators/Padding';
 import { Size } from 'src/styles/decorators/Size';
 import { gutter, toPx } from 'src/styles/mixins';
 
@@ -22,9 +21,12 @@ const DishesListing: React.SFC = () => (
     {({ items }) => (
       Object
         .entries(groupBy(items, (value, index) => index % 4))
-        .map(([column, columnItems]: [string, any[]]) => (
+        .map(([column, columnItems]: [string, any[]], index: number) => (
           <Size width="25%">
-            <Padding left={toPx(gutter())} right={toPx(gutter())}>
+            <Margin
+              left={index === 3 ? toPx(gutter()) : undefined}
+              right={index === 0 ? toPx(gutter()) : undefined}
+            >
               <div key={column}>
                 {columnItems.map((item: any) => (
                   <Link to={getDishDetailsPath(item.id)}>
@@ -41,7 +43,7 @@ const DishesListing: React.SFC = () => (
                   </Link>
                 ))}
               </div>
-            </Padding>
+            </Margin>
           </Size>
         ))
     )}

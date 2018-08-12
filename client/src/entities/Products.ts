@@ -64,8 +64,4 @@ class Products extends React.Component<IProductsProps, any> {
   }
 }
 
-Products.defaultProps = {
-  initial: {},
-};
-
 export { Products };

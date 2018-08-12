@@ -1,6 +1,9 @@
 import * as React from 'react';
 
-import { makeGetDishesRequest } from 'src/api/dishes';
+import {
+  makeGetDishesRequest,
+  makeGetDishRequest,
+} from 'src/api/dishes';
 
 interface IChildrenArguments {
   error: any;
@@ -10,10 +13,12 @@ interface IChildrenArguments {
 }
 interface IDishesProps {
   children: (args: IChildrenArguments) => React.ReactNode;
+  id?: string;
 }
 
 class Dishes extends React.Component<IDishesProps, any> {
   public static defaultProps = {
+    id: null,
     initial: {},
   };
 
@@ -42,8 +47,32 @@ class Dishes extends React.Component<IDishesProps, any> {
     }
   }
 
+  public async getOne(id: string) {
+    try {
+      this.setState({ isLoading: true });
+      const { data } = await makeGetDishRequest(id);
+
+      this.setState({
+        hasMadeRequest: true,
+        isLoading: false,
+        items: [data],
+      });
+    } catch (error) {
+      this.setState({
+        error,
+        isLoading: false,
+      });
+    }
+  }
+
   public componentDidMount() {
-    this.getAll();
+    const { id } = this.props;
+
+    if (id) {
+      this.getOne(id);
+    } else {
+      this.getAll();
+    }
   }
 
   public render(): React.ReactNode {
@@ -63,9 +92,5 @@ class Dishes extends React.Component<IDishesProps, any> {
     });
   }
 }
-
-Dishes.defaultProps = {
-  initial: {},
-};
 
 export { Dishes };
