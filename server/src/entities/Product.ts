@@ -8,21 +8,27 @@ import {
 import { Ingredient } from './Ingredient';
 
 @Entity()
-class Dish {
+class Product {
   @PrimaryGeneratedColumn()
   id: number;
 
   @Column()
-  description: string;
+  calories: number;
+
+  @Column()
+  carbohydrates: number;
+
+  @Column()
+  fats: number;
 
   @Column()
   name: string;
 
   @Column()
-  recipe: string;
+  proteins: number;
 
-  @OneToMany(type => Ingredient, ingredient => ingredient.dish)
+  @OneToMany(type => Ingredient, ingredient => ingredient.product)
 	ingredients: Ingredient[];
 }
 
-export { Dish };
+export { Product };

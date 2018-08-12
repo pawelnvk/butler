@@ -1,11 +1,12 @@
 import {
   Column,
   Entity,
-  OneToMany,
+  ManyToOne,
   PrimaryGeneratedColumn,
 } from 'typeorm';
 
-import { DishIngredient } from './DishIngredient';
+import { Dish } from './Dish';
+import { Product } from './Product';
 
 @Entity()
 class Ingredient {
@@ -13,22 +14,13 @@ class Ingredient {
   id: number;
 
   @Column()
-  calories: number;
+  weight: number;
 
-  @Column()
-  carbohydrates: number;
+  @ManyToOne(type => Dish, dish => dish.ingredients)
+	dish: Dish;
 
-  @Column()
-  fats: number;
-
-  @Column()
-  name: string;
-
-  @Column()
-  proteins: number;
-
-  @OneToMany(type => DishIngredient, dishIngredient => dishIngredient.dish)
-	dishes: DishIngredient[];
+  @ManyToOne(type => Product, product => product.ingredients)
+	product: Product;
 }
 
 export { Ingredient };

@@ -5,17 +5,19 @@ import { app } from '../index';
 
 const { expect } = chai;
 
-describe('DishController', () => {
-  describe('POST /dishes', () => {
+describe('ProductController', () => {
+  describe('POST /products', () => {
     it('responds correctly', () => {
       const data = {
+        calories: 340,
+        carbohydrates: 20,
+        fats: 20,
         name: 'name',
-        description: 'description',
-        recipe: 'recipe',
+        proteins: 20,
       };
 
       return request(app)
-        .post('/api/v1/dishes')
+        .post('/api/v1/products')
         .send(data)
         .expect(200)
         .then(({ body }) => {

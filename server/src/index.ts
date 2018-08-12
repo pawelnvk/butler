@@ -9,6 +9,7 @@ import { createConnection } from 'typeorm';
 
 import { APP_PORT } from '../config';
 import { DishController } from './controllers/DishController';
+import { ProductController } from './controllers/ProductController';
 
 const swaggerConfig = require('../swagger.json');
 
@@ -17,6 +18,7 @@ export const dbConnection = createConnection()
   .then(() => console.log(`Database connection established`))
   .catch(error => console.error('TypeORM connection error: ', error));
 
+app.disable('x-powered-by');
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json({ type: ['application/json', 'application/vnd.api+json'] }));
 app.use(cors());
@@ -29,6 +31,7 @@ useExpressServer(app, {
   },
   controllers: [
     DishController,
+    ProductController,
   ],
 });
 
