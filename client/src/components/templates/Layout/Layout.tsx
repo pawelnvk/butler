@@ -6,7 +6,8 @@ import { OnDidMount } from 'src/composers/OnDidMount';
 import { ShadowState } from 'src/composers/ShadowState';
 import { State } from 'src/composers/State';
 import { Margin } from 'src/styles/decorators/Margin';
-import { toPx } from 'src/styles/mixins';
+import { Padding } from 'src/styles/decorators/Padding';
+import { gutter, toPx } from 'src/styles/mixins';
 
 interface ILayoutProps {
   children: React.ReactNode;
@@ -19,13 +20,15 @@ const Layout: React.SFC<ILayoutProps> = ({ children }) => {
         <ShadowState>
           {({ set: setShadowState, shadowState }) => (
             <React.Fragment>
-              <Header setRef={ref => {
+              <Header setRef={(ref) => {
                 setShadowState({ headerRef: ref });
               }} />
 
               <OnDidMount action={() => set({ top: shadowState.headerRef.clientHeight })}>
                 <Margin top={toPx(state.top)}>
-                  <Body>{children}</Body>
+                  <Padding bottom={toPx(gutter(2))} top={toPx(gutter(2))}>
+                    <Body>{children}</Body>
+                  </Padding>
                 </Margin>
               </OnDidMount>
             </React.Fragment>

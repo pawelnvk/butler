@@ -14,7 +14,7 @@ import { Margin } from 'src/styles/decorators/Margin';
 import { StyledHeader } from './Header.styled';
 
 interface IHeaderProps {
-  setRef?: (string & ((instance: HTMLElement | null) => any));
+  setRef?: (instance: HTMLElement | null) => void;
 }
 
 const Header: React.SFC<IHeaderProps> = ({ setRef }) => {
