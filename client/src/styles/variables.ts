@@ -109,6 +109,7 @@ export const fontBadge = font({
 });
 
 export const baseColor = '#333333';
+export const baseBackgroundColor = '#f8f8f8';
 export const borderColor = '#dedede';
 export const dangerColor = '#c80039';
 export const grayColor = '#999999';
@@ -120,3 +121,5 @@ export const textColor = '#777777';
 export const whiteColor = '#ffffff';
 
 export const unorderedDiskSize = 5;
+
+export const containerWidth = 1140;
