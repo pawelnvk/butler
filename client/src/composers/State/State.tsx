@@ -31,8 +31,4 @@ class State extends React.Component<IStateProps, any> {
   }
 }
 
-State.defaultProps = {
-  initial: {},
-};
-
 export { State };
