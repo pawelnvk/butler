@@ -1,5 +1,4 @@
 import * as isUndefined from 'lodash.isundefined';
-import { css } from 'styled-components';
 
 export const gutter = (ratio: number = 1) => 12 * ratio;
 
