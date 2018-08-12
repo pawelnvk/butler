@@ -51,7 +51,7 @@ const ProductCreation: React.SFC = () => {
         name,
         proteins,
       }).then(() => {
-        window.location.replace(getProductsListPath());
+        window.location.assign(getProductsListPath());
       });
     }}>
       {({ handleSubmit }) => (
