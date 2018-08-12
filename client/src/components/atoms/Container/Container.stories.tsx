@@ -5,5 +5,5 @@ import { Container } from './Container';
 
 storiesOf('Atoms/Container', module)
   .add('example', () => (
-    <Container />
+    <Container>Test</Container>
   ));
