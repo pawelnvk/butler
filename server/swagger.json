@@ -1,0 +1,202 @@
+{
+  "info": {
+    "description": "Butler JSON API",
+    "title": "Butler",
+    "version": "1.0.0"
+  },
+  "host": "localhost:8000",
+  "basePath": "/api/v1",
+  "swagger": "2.0",
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "definitions": {
+    "DishPostAndPatchRequest": {
+      "properties": {
+        "description": {
+          "type": "string"
+        },
+        "ingredients": {
+          "type": "array",
+          "items": {
+            "id": "number",
+            "weight": "number"
+          }
+        },
+        "name": {
+          "type": "string"
+        },
+        "recipe": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "description",
+        "name"
+      ],
+      "type": "object"
+    },
+    "ProductPostAndPatchRequest": {
+      "properties": {
+        "calories": {
+          "type": "number"
+        },
+        "carbohydrates": {
+          "type": "number"
+        },
+        "fats": {
+          "type": "number"
+        },
+        "name": {
+          "type": "string"
+        },
+        "proteins": {
+          "type": "number"
+        }
+      },
+      "required": [
+        "calories",
+        "carbohydrates",
+        "fats",
+        "name",
+        "proteins"
+      ],
+      "type": "object"
+    }
+  },
+  "paths": {
+    "/dishes": {
+      "get": {
+        "tags": [
+          "Dishes"
+        ],
+        "description": "Get dishes list",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Dishes"
+        ],
+        "description": "Create new dish",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/DishPostAndPatchRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/dishes/{id}": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "description": "ID of dish that we want to find",
+          "type": "string"
+        }
+      ],
+      "get": {
+        "tags": [
+          "Dishes"
+        ],
+        "description": "Get dish with given ID",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Dish is found"
+          }
+        }
+      }
+    },
+    "/products": {
+      "get": {
+        "tags": [
+          "Products"
+        ],
+        "description": "Get product list",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Products"
+        ],
+        "description": "Create new product",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "request",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/ProductPostAndPatchRequest"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/products/{id}": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "description": "ID of product that we want to find",
+          "type": "string"
+        }
+      ],
+      "get": {
+        "tags": [
+          "Products"
+        ],
+        "description": "Get product with given ID",
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "Product is found"
+          }
+        }
+      }
+    }
+  }
+}

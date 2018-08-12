@@ -33,7 +33,20 @@ Client part of an app is located in `server` folder.
 Before starting remember to install required node modules.
 
 ### NPM scripts
+`check:test` - run tests
+
+`create:entity` - creating entity
 
 `db:create:dev` - creating development database
+
+`db:create:test` - creating test database
+
+`db:create:user` - creating database user
+
+`migration:generate` - generating migration from current entities
+
+`migration:run:dev` - running migration for development database
+
+`migration:run:test` - running migration for test database
 
 `start:dev` - starting development server
