@@ -11,6 +11,7 @@ export const captionFontSize = 12;
 export const tableFontSize = 12;
 export const buttonFontSize = 14;
 export const badgeFontSize = 10;
+export const navItemFontSize = 14;
 
 export const heading1LineHeight = 49;
 export const heading2LineHeight = 33;
@@ -23,6 +24,7 @@ export const captionLineHeight = 16;
 export const tableLineHeight = 16;
 export const buttonLineHeight = 19;
 export const badgeLineHeight = 14;
+export const navItemLineHeight = 19;
 
 export const heading1fontWeight = 500;
 export const heading2fontWeight = 500;
@@ -35,6 +37,7 @@ export const captionFontWeight = 400;
 export const tableFontWeight = 500;
 export const buttonFontWeight = 900;
 export const badgeFontWeight = 900;
+export const navItemFontWeight = 900;
 
 export const fontFamily = '\'Muli\', sans-serif';
 
@@ -106,6 +109,7 @@ export const fontBadge = font({
 });
 
 export const baseColor = '#333333';
+export const baseBackgroundColor = '#f8f8f8';
 export const borderColor = '#dedede';
 export const dangerColor = '#c80039';
 export const grayColor = '#999999';
@@ -117,3 +121,5 @@ export const textColor = '#777777';
 export const whiteColor = '#ffffff';
 
 export const unorderedDiskSize = 5;
+
+export const containerWidth = 1140;
