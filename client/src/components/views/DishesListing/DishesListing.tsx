@@ -24,8 +24,8 @@ const DishesListing: React.SFC = () => (
         .map(([column, columnItems]: [string, any[]], index: number) => (
           <Size width="25%">
             <Margin
-              left={index === 3 ? toPx(gutter()) : undefined}
-              right={index === 0 ? toPx(gutter()) : undefined}
+              left={index !== 0 ? toPx(gutter()) : undefined}
+              right={index !== 3 ? toPx(gutter()) : undefined}
             >
               <div key={column}>
                 {columnItems.map((item: any) => (

@@ -1,6 +1,9 @@
 import * as React from 'react';
 
-import { makeGetProductsRequest } from 'src/api/products';
+import {
+  makeGetProductRequest,
+  makeGetProductsRequest,
+} from 'src/api/products';
 
 interface IChildrenArguments {
   error: any;
@@ -10,10 +13,12 @@ interface IChildrenArguments {
 }
 interface IProductsProps {
   children: (args: IChildrenArguments) => React.ReactNode;
+  id?: string;
 }
 
 class Products extends React.Component<IProductsProps, any> {
   public static defaultProps = {
+    id: null,
     initial: {},
   };
 
@@ -42,8 +47,32 @@ class Products extends React.Component<IProductsProps, any> {
     }
   }
 
+  public async getOne(id: string) {
+    try {
+      this.setState({ isLoading: true });
+      const { data } = await makeGetProductRequest(id);
+
+      this.setState({
+        hasMadeRequest: true,
+        isLoading: false,
+        items: [data],
+      });
+    } catch (error) {
+      this.setState({
+        error,
+        isLoading: false,
+      });
+    }
+  }
+
   public componentDidMount() {
-    this.getAll();
+    const { id } = this.props;
+
+    if (id) {
+      this.getOne(id);
+    } else {
+      this.getAll();
+    }
   }
 
   public render(): React.ReactNode {

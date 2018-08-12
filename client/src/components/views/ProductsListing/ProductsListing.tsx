@@ -30,7 +30,7 @@ const ProductsListing: React.SFC = () => (
               fats,
               carbohydrates,
               calories,
-            }).map(([propName, propValue]: [string, string]) => (
+            }).map(([propName, propValue]: [string, number]) => (
               <TextAlign key={propName} align="center">
                 <Size width="100px">
                   <CardTableCell>

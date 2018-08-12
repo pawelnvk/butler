@@ -5,21 +5,18 @@ export const makeGetDishesRequest = () => get('/dishes');
 export const makeGetDishRequest = (id: string) => get(`/dishes/${id}`);
 
 export const makePostDishRequest = ({
-  calories,
-  carbohydrates,
-  fats,
+  description,
+  ingredients,
   name,
-  proteins,
+  recipe,
 }: {
-  calories: string,
-  carbohydrates: string,
-  fats: string,
+  description: string,
+  ingredients: any[],
   name: string,
-  proteins: string,
+  recipe: string,
 }) => post('/dishes', {
-  calories,
-  carbohydrates,
-  fats,
+  description,
+  ingredients,
   name,
-  proteins,
+  recipe,
 });

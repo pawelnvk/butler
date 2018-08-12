@@ -7,11 +7,13 @@ import {
 } from 'react-router-dom';
 
 import { Layout } from 'src/components/templates/Layout';
+import { DishCreation } from 'src/components/views/DishCreation';
 import { DishDetails } from 'src/components/views/DishDetails';
 import { DishesListing } from 'src/components/views/DishesListing';
 import { ProductCreation } from 'src/components/views/ProductCreation';
 import { ProductsListing } from 'src/components/views/ProductsListing';
 import {
+  getDishCreationPath,
   getDishDetailsPath,
   getDishesListPath,
   getHomePagePath,
@@ -25,9 +27,10 @@ const App = () => (
       <Switch>
         <Route path={getDishDetailsPath()} component={DishDetails} />
         <Route path={getDishesListPath()} component={DishesListing} />
+        <Route path={getDishCreationPath()} component={DishCreation} />
         <Route path={getProductsListPath()} component={ProductsListing} />
         <Route path={getProductCreationPath()} component={ProductCreation} />
-        <Redirect from={getHomePagePath()} to={getDishesListPath()} />
+        <Redirect exact={true} from={getHomePagePath()} to={getDishesListPath()} />
       </Switch>
     </Layout>
   </Router>
