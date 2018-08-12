@@ -11,6 +11,7 @@ interface IButtonProps {
   primary?: boolean;
   small?: boolean;
   to?: string;
+  type?: string;
 }
 
 const Button: React.SFC<IButtonProps> = ({
@@ -20,9 +21,10 @@ const Button: React.SFC<IButtonProps> = ({
   primary,
   small,
   to,
+  type,
 }) => {
   const Element = to ? StyledLink : StyledButton;
-  const elementProps = to ? { to } : { onClick };
+  const elementProps = to ? { to } : { onClick, type };
 
   return (
     <Element
@@ -43,6 +45,7 @@ Button.defaultProps = {
   primary: false,
   small: false,
   to: '',
+  type: 'button',
 };
 
 export { Button };
