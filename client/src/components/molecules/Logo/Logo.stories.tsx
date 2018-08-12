@@ -5,7 +5,7 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { Logo } from './Logo';
 
 storiesOf('Molecules/Logo', module)
-  .add('example', () => (
+  .add('default', () => (
     <Router>
       <Logo />
     </Router>
