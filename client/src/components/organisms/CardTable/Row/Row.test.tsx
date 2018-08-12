@@ -3,12 +3,11 @@ import * as React from 'react';
 
 import { Cell } from '../Cell';
 import { Row } from './Row';
+import { Row as StyledRow } from './Row.styled';
 
 const getComponent = (customProps = {}) => {
   const children = (
-    <Row>
-      <Cell>Example</Cell>
-    </Row>
+    <Cell key="1">Example</Cell>
   );
   const props = { children };
   const jsx = (
@@ -24,22 +23,23 @@ it('renders without crashing', () => {
   expect(component.length).toBe(1);
 });
 
-it('contains table row', () => {
+it('contains styled table row', () => {
   const component = getComponent();
 
-  expect(component.is('tr')).toBeTruthy();
+  expect(component.is(StyledRow)).toBeTruthy();
 });
 
-it('renders only table cell as direct descendant', () => {
+it('renders all elements as direct descendant', () => {
   const jsx = (
     <Row>
-      <Cell>Example</Cell>
-      <div>Another example</div>
+      <Cell key="1">Example</Cell>
+      <div key="2">Another example</div>
     </Row>
   );
   const component = shallow(jsx);
 
   const children = component.children();
   expect(children.at(0).is(Cell)).toBeTruthy();
-  expect(children.length).toEqual(1);
+  expect(children.at(1).is('div')).toBeTruthy();
+  expect(children.length).toEqual(2);
 });

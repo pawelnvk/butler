@@ -33,12 +33,12 @@ export const position = ({
   position: positionProperty,
   right,
   top,
-}: IPositionArguments) => css`
+}: IPositionArguments) => `
   position: ${positionProperty};
-  ${isUndefined(top) ? '' : css`top: ${top};`}
-  ${isUndefined(right) ? '' : css`right: ${right};`}
-  ${isUndefined(bottom) ? '' : css`bottom: ${bottom};`}
-  ${isUndefined(left) ? '' : css`left: ${left};`}
+  ${isUndefined(top) ? '' : `top: ${top};`}
+  ${isUndefined(right) ? '' : `right: ${right};`}
+  ${isUndefined(bottom) ? '' : `bottom: ${bottom};`}
+  ${isUndefined(left) ? '' : `left: ${left};`}
 `;
 
 export const absolute = (coordinates?: IPositionCoordinates) =>
@@ -53,7 +53,7 @@ interface ISize {
   width?: string;
 }
 
-export const size = ({ height, width }: ISize) => css`
-  ${height ? css`height: ${height};` : ''}
-  ${width ? css`width: ${width};` : ''}
+export const size = ({ height, width }: ISize) => `
+  ${height ? `height: ${height};` : ''}
+  ${width ? `width: ${width};` : ''}
 `;
