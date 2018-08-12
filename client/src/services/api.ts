@@ -8,3 +8,5 @@ const instance = axios.create({
 });
 
 export const get = instance.get;
+
+export const post = instance.post;

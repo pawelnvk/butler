@@ -4,9 +4,9 @@ import { Container } from 'src/components/atoms/Container';
 import { NavItem } from 'src/components/atoms/NavItem';
 import { Logo } from 'src/components/molecules/Logo';
 import {
-  getCreateDishPath,
-  getCreateProductPath,
+  getDishCreationPath,
   getDishesListPath,
+  getProductCreationPath,
   getProductsListPath,
 } from 'src/constants/paths';
 import { Margin } from 'src/styles/decorators/Margin';
@@ -25,8 +25,8 @@ const Header: React.SFC<IHeaderProps> = ({ setRef }) => {
 
         <Margin left="auto">
           <div>
-            <NavItem to={getCreateDishPath()}>Add dish</NavItem>
-            <NavItem to={getCreateProductPath()}>Add product</NavItem>
+            <NavItem to={getDishCreationPath()}>Add dish</NavItem>
+            <NavItem to={getProductCreationPath()}>Add product</NavItem>
             <NavItem to={getDishesListPath()}>Dishes</NavItem>
             <NavItem to={getProductsListPath()}>Products</NavItem>
           </div>
