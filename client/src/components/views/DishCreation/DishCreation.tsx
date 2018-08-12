@@ -51,7 +51,7 @@ const DishCreation: React.SFC = () => (
         name,
         recipe,
       }).then(() => {
-        window.location.replace(getDishesListPath());
+        window.location.assign(getDishesListPath());
       });
     }}
   >

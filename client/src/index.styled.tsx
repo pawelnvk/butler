@@ -11,4 +11,10 @@ export const global = () => injectGlobal`
     padding: 0;
     font-family: 'Muli', sans-serif;
   }
+
+  #root {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 `;

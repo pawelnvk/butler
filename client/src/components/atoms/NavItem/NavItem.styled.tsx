@@ -1,4 +1,4 @@
-import { Link as RouterLink } from 'react-router-dom';
+import { NavLink as RouterLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 import {
